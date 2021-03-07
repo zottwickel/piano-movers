@@ -17,8 +17,6 @@
   color: white;
 }
 
-@media only screen and (min-width: 768px) {
-  .hero {
-    background-position: 0 -10vw;
-  }
+.mat-display-1 {
+  margin-bottom: 0;
 }

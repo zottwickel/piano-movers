@@ -1,0 +1,35 @@
+section {
+  padding: 70px 1rem;
+}
+
+.card {
+  background: grey;
+  color: white;
+  opacity: 0;
+  transition: all 0.6s linear;
+}
+
+.inFromLeft {
+  transform: translateX(-300px);
+}
+
+.inFromRight {
+  transform: translateX(300px);
+}
+
+.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.piano-keys {
+  width: 100%;
+  height: 500px;
+  background: center no-repeat;
+}
+
+@media only screen and (min-width: 1200px) {
+  .piano-keys {
+    background-size: 100%;
+  }
+}

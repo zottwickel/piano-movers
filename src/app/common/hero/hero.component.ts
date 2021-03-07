@@ -42,7 +42,7 @@ export class HeroComponent implements OnInit {
   ngOnInit(): void {
     this.styleString = `
       background-image: url('${this.backgroundUrl}');
-      height: ${this.isHome ? '50vh' : '80vh'};
+      height: ${this.isHome ? '100vh' : '80vh'};
     `;
   }
 
