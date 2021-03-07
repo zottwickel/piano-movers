@@ -1,34 +1,38 @@
-<mat-toolbar class="phone" color="primary">
-  <mat-icon>phone</mat-icon>
-  <h1>
-    <a class="phone-header" href="tel:+13853264754">385-326-4754</a>
-  </h1>
-</mat-toolbar>
-<mat-toolbar 
-  *ngIf="screenWidth <= 768"
-  color="accent"
-  class="mat-typography">
-  <mat-toolbar-row>
-    <mat-icon class="piano-icon">piano</mat-icon>
-    <h1 class="nav-heading">
-      <a routerLink="/" routerLinkActive="active">801 Piano Movers</a>
+<mat-toolbar class="phone mat-typography">
+  <div class="phone-content">
+    <mat-icon>phone</mat-icon>
+    <h1>
+      <a class="phone-header" href="tel:+13853264754">385-326-4754</a>
     </h1>
-    <span class="spacer"></span>
-    <button 
-      mat-icon-button
-      (click)="onBurgerClicked()">
-      <mat-icon>menu</mat-icon>
-    </button>
+  </div>
+</mat-toolbar>
+<mat-toolbar
+  *ngIf="screenWidth < 600"
+  class="mat-typography">
+  <mat-toolbar-row class="main">
+    <div class="main-content">
+      <mat-icon class="piano-icon">piano</mat-icon>
+      <h1 class="nav-heading">
+        <a routerLink="/" routerLinkActive="active">801 Piano Movers</a>
+      </h1>
+      <span class="spacer"></span>
+      <button 
+        mat-icon-button
+        (click)="onBurgerClicked()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
   </mat-toolbar-row>
   <mat-toolbar-row 
-    *ngFor="let link of links"
+    *ngFor="let link of links; last as last"
     class="link-row"
-    [class.disabled]="isHidden">
+    [class.not-last]="!last"
+    [@hideShow]="isHidden ? 'hide' : 'show'">
     <a routerLink="{{ link.outlet }}" routerLinkActive="active">{{ link.text }}</a>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-toolbar 
-  *ngIf="screenWidth > 768"
+  *ngIf="screenWidth >= 600"
   color="accent"
   class="mat-typography">
   <mat-icon class="piano-icon">piano</mat-icon>

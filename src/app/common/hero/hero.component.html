@@ -2,7 +2,8 @@
   [style]="styleString"
   class="hero">
   <mat-card
-    class="hero-header">
+    class="hero-header"
+    [@headerEnter]="'in'">
     <mat-card-title class="title">
       {{ title }}
     </mat-card-title>
