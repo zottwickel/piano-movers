@@ -38,3 +38,17 @@
 .piano-icon {
   margin-right: 1rem;
 }
+
+.phone {
+  justify-content: center;
+}
+
+.phone-header {
+  font-size: 1.5rem;
+  color: yellow;
+  text-decoration: none;
+}
+
+.phone-header:hover {
+  text-decoration: underline;
+}
