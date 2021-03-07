@@ -1,32 +1,38 @@
-<mat-toolbar color="accent" class="mat-typography">
-  <div *ngIf="screenWidth <= 768">
-    <mat-toolbar-row color="accent">
-      <mat-icon class="piano-icon">piano</mat-icon>
-      <h1 class="nav-heading">801 Piano Movers</h1>
-      <span class="spacer"></span>
-      <button 
-        mat-icon-button
-        (click)="onNavburgerClicked()">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </mat-toolbar-row>
-    <mat-toolbar-row 
-      *ngFor="let link of links"
-      class="link-row"
-      [class.disabled]="isHidden">
-      <a href="{{ link.url }}">{{ link.text }}</a>
-    </mat-toolbar-row>
-  </div>
-  <div *ngIf="screenWidth > 768">
-    <mat-toolbar-row color="accent">
-      <mat-icon class="piano-icon">piano</mat-icon>
-      <h1 class="nav-heading">801 Piano Movers</h1>
-      <span class="spacer"></span>
-      <div 
-        *ngFor="let link of links"
-        class="inline-link">
-        <a href="{{ link.url }}">{{ link.text }}</a>
-      </div>
-    </mat-toolbar-row>
+<mat-toolbar 
+  *ngIf="screenWidth <= 768"
+  color="accent"
+  class="mat-typography">
+  <mat-toolbar-row>
+    <mat-icon class="piano-icon">piano</mat-icon>
+    <h1 class="nav-heading">
+      <a routerLink="/" routerLinkActive="active">801 Piano Movers</a>
+    </h1>
+    <span class="spacer"></span>
+    <button 
+      mat-icon-button
+      (click)="onBurgerClicked()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar-row>
+  <mat-toolbar-row 
+    *ngFor="let link of links"
+    class="link-row"
+    [class.disabled]="isHidden">
+    <a routerLink="{{ link.outlet }}" routerLinkActive="active">{{ link.text }}</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar 
+  *ngIf="screenWidth > 768"
+  color="accent"
+  class="mat-typography">
+  <mat-icon class="piano-icon">piano</mat-icon>
+  <h1 class="nav-heading">
+    <a routerLink="/" routerLinkActive="active">801 Piano Movers</a>
+  </h1>
+  <span class="spacer"></span>
+  <div 
+    *ngFor="let link of links"
+    class="inline-link">
+    <a routerLink="{{ link.outlet }}" routerLinkActive="active">{{ link.text }}</a>
   </div>
 </mat-toolbar>

@@ -1,7 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 export interface Link {
-  url: string;
+  outlet: string;
   text: string;
 }
 
@@ -12,16 +13,21 @@ export interface Link {
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
-
   isHidden: boolean = true;
   screenWidth: number = screen.width;
   links: Link[] = [
-    {url: '#', text: 'About'},
-    {url: '#', text: 'Contact'},
-  ]
+    {outlet: '/about', text: 'About'},
+    {outlet: '/contact', text: 'Contact'},
+  ];
+  
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) this.isHidden = true;
+    })
   }
 
   @HostListener('window:resize', ['$event'])
@@ -29,8 +35,7 @@ export class NavComponent implements OnInit {
     this.screenWidth = window.innerWidth;
   }
 
-  onNavburgerClicked(): void {
+  onBurgerClicked(): void {
     this.isHidden = !this.isHidden;
   }
-
 }

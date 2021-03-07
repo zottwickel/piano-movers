@@ -2,6 +2,12 @@
   font-family: 'Bungee Inline', Arial, Helvetica, sans-serif;
 }
 
+.nav-heading > a {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .spacer {
   flex: 1 1 auto;
 }
