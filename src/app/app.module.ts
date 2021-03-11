@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
+// import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,6 +17,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HeroComponent } from './common/hero/hero.component';
 
+// AnimateOnScroll is potentially implemented in the future,
+// although now I am in ship mode.
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +33,7 @@ import { HeroComponent } from './common/hero/hero.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AnimateOnScrollModule.forRoot(),
+    // AnimateOnScrollModule.forRoot(),
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
