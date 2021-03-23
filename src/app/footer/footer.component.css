@@ -1,0 +1,31 @@
+.bar {
+  display: block;
+  width: 80%;
+  height: 1px;
+  background: white;
+  margin: 0 auto;
+}
+
+.under {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.link {
+  color: white;
+  padding: 0 1rem;
+}
+
+.footer-icon {
+  font-size: 2rem;
+  transition: all linear 0.2s;
+  cursor: pointer;
+}
+
+.footer-icon:hover {
+  color: yellow;
+}
+
+.copyright {
+  text-align: center;
+}

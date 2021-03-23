@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -16,9 +17,10 @@ import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HeroComponent } from './common/hero/hero.component';
+import { FooterComponent } from './footer/footer.component';
 
 // AnimateOnScroll is potentially implemented in the future,
-// although now I am in ship mode.
+// right now there is an error where things are animating before being scrolled to.
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { HeroComponent } from './common/hero/hero.component';
     AboutComponent,
     ContactComponent,
     FourOhFourComponent,
-    HeroComponent
+    HeroComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { HeroComponent } from './common/hero/hero.component';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
