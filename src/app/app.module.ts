@@ -17,7 +17,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HeroComponent } from './common/hero/hero.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 // AnimateOnScroll is potentially implemented in the future,
 // right now there is an error where things are animating before being scrolled to.

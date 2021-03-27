@@ -4,8 +4,7 @@ import {
   state,
   style,
   animate,
-  transition,
-  query
+  transition
 } from '@angular/animations';
 
 @Component({
@@ -43,6 +42,7 @@ export class HeroComponent implements OnInit {
     this.styleString = `
       background-image: url('${this.backgroundUrl}');
       height: ${this.isHome ? '100vh' : '80vh'};
+      background-position-y: ${this.isHome ? '0' : '40%'};
     `;
   }
 

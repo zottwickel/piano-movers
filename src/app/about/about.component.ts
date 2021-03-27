@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  backgroundUrl: string = '../../../assets/images/moving-truck.jpg';
   constructor() { }
 
   ngOnInit(): void {

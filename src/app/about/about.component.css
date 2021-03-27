@@ -1,0 +1,28 @@
+.top-card-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.outer-card {
+  width: 40%;
+  margin: 2rem auto;
+}
+
+.card {
+  background: grey;
+  color: white;
+}
+
+.card-image {
+  height: 300px;
+  width: 100%;
+}
+
+.about-header {
+  text-align: center;
+}
+
+.mission {
+  max-width: 80%;
+  margin: 0 auto;
+}
